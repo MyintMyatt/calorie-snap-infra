@@ -1,6 +1,8 @@
 This is the standard approach if you plan to use Kustomize (built into kubectl) or GitOps tools like ArgoCD. It separates your base configurations from environment-specific overrides, preventing code duplication.textk8s-infrastructure/
 ```
 ├── base/
+|   ├── aws-eks-cluster/
+|   |   ├── cluster-config.yaml
 │   ├── kafka/
 │   │   ├── kustomization.yaml
 │   │   ├── statefulset.yaml

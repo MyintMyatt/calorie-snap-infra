@@ -1,0 +1,13 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: calorie-snap-eks-cluster
+  region: ap-southeast-1
+managedNodeGroups:
+  - name: calorie-snap-worker-nodes
+    instanceType: t3.small
+    desiredCapacity: 1 #2
+    minSize: 1
+    maxSize: 2
+    spot: true
+    labels: { role: workers }
