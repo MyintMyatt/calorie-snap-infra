@@ -5,8 +5,7 @@ metadata:
   namespace: rabbitmq-messaging
 spec:
   rules:
-    - host: rabbitmq.local
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
